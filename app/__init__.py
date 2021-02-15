@@ -1,3 +1,5 @@
+""" __init__ allows the app directory to be run like an application
+all basic definitions are include in this file """
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -12,4 +14,5 @@ db = SQLAlchemy(app)
 db.metadata.reflect = True
 migrate = Migrate(app, db)
 
-from app import models, routes
+# this import must be below the app and db definition
+from app import models, routes  # pylint: disable=wrong-import-position
