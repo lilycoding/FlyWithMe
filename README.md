@@ -6,6 +6,8 @@ I've created this quick flask demo for you to check out. These directions were w
 
 I've used the [very accessible tutorial by Miguel Grinberg](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) as a base for this project. We can create a new project if we want, but I wanted you to have something to work with for now.
 
+You'll notice that I'm putting `python3 -m` before many of these commands. This is to ensure that we use the package python to install any requirements.
+
 ### How to get started (on windows) (EDIT ME)
 
 1. Install [Python 3](https://www.python.org/downloads/).
@@ -52,3 +54,13 @@ I've used the [very accessible tutorial by Miguel Grinberg](https://blog.miguelg
 You must run linters and test before committing your code or QA will wag their finger at you and make you fix it! More details on how to do this coming.
 
 Do not add .pyc files to your commit. You can ask git to ignore certain files by altering the `.gitignore` file.
+
+### Linters & Testing
+
+When you create a Pull Request automatic checks will be run. These checks currently include linters on all code in the project. In the future tests will be run automatically as well.
+
+Your code will need to pass QA before it can be merged into main. 
+
+To run [pylint](https://pylint.org/) on a file, you only need to run `pylint path/to/file`. 
+
+To run a [python unittest](https://docs.python.org/3/library/unittest.html#module-unittest) you only need to run `python3 -m unittest path/to/file --verbose`. The `--verbose` flag gives you more information on the tests that you ran, and is helpful for debugging. 
